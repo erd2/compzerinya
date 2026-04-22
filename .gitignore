@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.db
+.env
+.env.*
+
+# Local helper scripts and test files
+check_db.py
+get_html.py
+get_kwork.ps1

@@ -1,0 +1,93 @@
+{"time":"2026-04-11 22:53:15,578","level":"INFO","name":"aiogram.dispatcher","message":"Start polling"}
+{"time":"2026-04-11 22:53:15,864","level":"INFO","name":"freelance_bot","message":"Loaded exchanges: ['Kwork']"}
+{"time":"2026-04-11 22:53:15,864","level":"INFO","name":"freelance_bot","message":"Fetching orders from Kwork"}
+{"time":"2026-04-11 22:53:26,532","level":"INFO","name":"exchanges.kwork","message":"Found 17 project link elements"}
+{"time":"2026-04-11 22:54:24,409","level":"INFO","name":"exchanges.kwork","message":"Parsed 1 orders from Kwork via Selenium"}
+{"time":"2026-04-11 22:54:26,623","level":"INFO","name":"aiogram.dispatcher","message":"Polling stopped"}
+{"time":"2026-04-11 22:54:26,875","level":"INFO","name":"freelance_bot","message":"–ë–æ—Ç –æ—Å—Ç–∞–Ω–æ–≤–ª–µ–Ω"}
+Traceback (most recent call last):
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiohttp\client.py", line 788, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiohttp\client.py", line 742, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiohttp\connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiohttp\connector.py", line 1251, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiohttp\connector.py", line 1574, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiohttp\connector.py", line 1190, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\client\session\aiohttp.py", line 167, in make_request
+    async with session.post(
+               ~~~~~~~~~~~~^
+        url,
+        ^^^^
+        data=form,
+        ^^^^^^^^^^
+        timeout=self.timeout if timeout is None else timeout,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as resp:
+    ^
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiohttp\client.py", line 1521, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiohttp\client.py", line 632, in _request
+    with timer:
+         ^^^^^
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiohttp\helpers.py", line 713, in __exit__
+    raise asyncio.TimeoutError from exc_val
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\nothingness\Desktop\ÑÑÑs-ÑqÑÄÑÑ\main.py", line 153, in <module>
+    asyncio.run(main())
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "c:\Users\nothingness\Desktop\ÑÑÑs-ÑqÑÄÑÑ\main.py", line 137, in main
+    await dp.start_polling(bot)
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 621, in start_polling
+    await asyncio.gather(*done)
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 377, in _polling
+    user: User = await bot.me()
+                 ^^^^^^^^^^^^^^
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\client\bot.py", line 367, in me
+    self._me = await self.get_me()
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\client\bot.py", line 1803, in get_me
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\client\bot.py", line 493, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\client\session\base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nothingness\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\aiogram\client\session\aiohttp.py", line 174, in make_request
+    raise TelegramNetworkError(method=method, message="Request timeout error") from e
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - Request timeout error
